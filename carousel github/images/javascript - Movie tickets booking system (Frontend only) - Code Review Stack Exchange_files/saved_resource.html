@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://stacksnippets.net/js -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        html{
+  height: 100%;
+}
+
+body{
+  font-family: "Arial", Helvetica, sans-serif;
+  position: relative;
+}
+
+#container{
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+
+#movies_booked, #form{
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+  vertical-align:text-top;
+}
+
+fieldset, #movies_booked{
+  border:1px solid #AED0EA;
+  border-radius:8px;
+  box-shadow:0 0 10px #D7EBF9;
+}
+
+legend, #disount_title{
+  color: #2779AA;
+  font-size: 120%;
+  text-align: center;
+  background-color: white;
+}
+
+p{
+  overflow: hidden;
+}
+
+label{
+  width: 50%;
+  text-align: right;
+  float: left;
+  clear: both;
+  color: #2779AA;
+}
+
+p input, p select{
+  width: 40%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #2779AA;
+}
+
+#theaters, #total_price, #movies_list, li, #perTicketPrice, #note{
+  color: #2779AA;
+}
+
+p span, li{
+  text-align: left;
+}
+
+#submit_wrapper{
+  text-align: center;
+}
+
+#submit{
+  font-size: 13px;
+}
+
+#discount, #perTicketPrice{
+  text-align: left;
+}
+
+#dateNote{
+  font-size: 9px;
+}
+    </style>
+    </head>
+<body>
+    <div id="container">
+  <div id="form">
+    <form id="book_tickets">
+      <fieldset>
+        <legend>Booking Details</legend>
+
+        <p>
+          <label for="movie_name">Movie</label>
+          <select id="movie_name" name="movie_name" required="" autofocus="">
+            <option></option>
+            <option value="Movie 1">Movie 1</option>
+            <option value="Movie 2">Movie 2</option>
+            <option value="Movie 3">Movie 3</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="theaters">Theaters</label>
+          <select id="theaters" required="">
+            <option></option>
+            <option value="Theater 1">Theater 1</option>
+            <option value="Theater 2">Theater 2</option>
+            <option value="Theater 3">Theater 3</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="date">Date<br><span id="dateNote">Firefox does not have a HTML5 datepicker <a href="https://support.mozilla.org/en-US/questions/986096">yet</a>.</span></label>
+          <input type="date" name="date" id="date" min="today" required="">
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required="">
+        </p>
+
+        <p>
+          <label for="tickets_quantity"># Tickets</label>
+          <input type="number" min="1" name="tickets_quantity" id="tickets_quantity" required="">
+        </p>
+
+        <p>
+          <label>Total Price</label>
+          <span id="total_price">(enter data first)</span>
+        </p>
+        <div id="submit_wrapper">
+          <input type="submit" id="submit" value="Book Tickets">
+        </div>
+      </fieldset>
+    </form>
+    <p id="perTicketPrice">Per ticket price = ₹ 100.00</p>
+    <p id="discount">
+      <span id="disount_title">Discounts:</span>
+    </p><ul>
+      <li>5% discount if show is on weekday</li>
+      <li>10% discount if number of booked shows &gt;= 10</li>
+    </ul>
+    <p></p>
+</div>
+
+<fieldset id="movies_booked">
+  <legend>Movies Booked Till Date</legend>
+  <span id="movies_list"></span>
+</fieldset>		    	
+
+</div>
+
+
+<script id="worker" type="javascript/worker">
+        self.onmessage = function msgWorkerHandler(event){
+            var jsonString = event.data;
+
+            var day = jsonString.day;
+            var number_booked_shows = jsonString.number_booked_shows;
+            var tickets_quantity = jsonString.tickets_quantity;
+
+            // set price of each ticket as Rs. 100
+            var totalPrice = tickets_quantity * 100;
+
+            // 5% discount if on weekday
+            if(day > 0 && day < 6){
+                totalPrice = totalPrice - 0.05 * totalPrice;
+            }
+
+            // 10% discount if number of booked shows >= 10
+            if(number_booked_shows >= 10){
+                totalPrice = totalPrice - 0.10 * totalPrice;
+            }
+
+           	postMessage("&#x20b9; " + totalPrice);
+        }
+</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+        // first check the movies already booked
+        checkMoviesBooked();
+        
+        // apply jQuery UI Redmond theme to 'Book Tickets' button
+        $("#submit").button();
+        
+        // calculateTotalPrice on keyup or on change of movie/date/tickets
+        $("#movie_name, #date, #tickets_quantity").keyup(calculateTotalPrice);
+        $("#movie_name, #date, #tickets_quantity").change(calculateTotalPrice);
+        
+        // on form submit
+        $("#book_tickets").submit(function(event){
+            
+            // prevent on submit page refresh
+            event.preventDefault();
+            
+            // check locally stored data
+            if(window.localStorage){
+                var moviesListJson = localStorage.getItem('movies_list');
+                var movies_list = moviesListJson ? JSON.parse(moviesListJson) : [];
+                var movie = $("#movie_name").val();
+                movies_list.push(movie);
+                localStorage.setItem('movies_list', JSON.stringify(movies_list));
+            }
+            
+            // clear the form					
+            $( '#book_tickets' ).each(function(){
+                this.reset();
+            });
+    
+            // reset (enter data first) message
+            $("#total_price").html("(enter data first)");
+            
+            // update movies booked list
+            checkMoviesBooked();
+        });
+        
+        // set minimum date in datepicker as today
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementsByName("date")[0].setAttribute('min', today);
+        
+    });
+    
+    function calculateTotalPrice(){
+        if($("#tickets_quantity").val() != "" && $("#movie_name").val() != "" && $("#date").val() != ""){
+            if(window.Worker){
+                // create web worker
+                var blob = new Blob(
+                    [document.querySelector("#worker").textContent],
+                    {type: 'text/javascript'});
+                var worker = new Worker(window.URL.createObjectURL(blob));
+                
+                worker.onmessage = function(event){
+                    $("#total_price").html(event.data);
+                }
+                worker.onerror = function(errorObject){
+                    $("#total_price").html("Error: " + errorObject.message);
+                }
+                
+                // get date
+                var date = new Date($('#date').val());
+                
+                // get day
+                var day = date.getDay();
+                
+                // get number of booked shows
+                var number_booked_shows;
+                if(window.localStorage){
+                    // check if movies_list is present already
+                    if(localStorage.getItem('movies_list')){
+                        var movieListJson = localStorage.getItem('movies_list');
+                        var movies_list = JSON.parse(movieListJson);
+                        number_booked_shows = movies_list.length;                    
+                    }
+                    else
+                        number_booked_shows = 0;
+                }
+                
+                // send JSON data to worker						
+                var jsonData = {'day': day,  'number_booked_shows': number_booked_shows, 'tickets_quantity': Number($("#tickets_quantity").val())};
+                worker.postMessage(jsonData);
+            }
+        }
+    }
+    
+    // fetch details of movies booked
+    function checkMoviesBooked(){
+        $("#movies_list").html("<span id='none'>(none)</span>");
+        if(window.localStorage){
+            if(localStorage.getItem('movies_list')){
+                $("#none").remove();
+                var movieListJson = localStorage.getItem('movies_list');
+                var movies_list = JSON.parse(movieListJson);
+                var sr_no = 0;
+                $.each(movies_list,function(key,value){
+                    $("#movies_list").append(++sr_no + ". " + value + "<br>");
+                });
+            }
+        }
+    }
+    </script>
+
+</body></html>

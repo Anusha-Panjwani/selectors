@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>movies carousel</title>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function checkusername() {
+  var name = document.getElementById('username').value;
+  if (name==null || name==""){
+    alert("username can't be blank");
+    return false;
+}
+}
+function checkpassword() {
+  var password = document.getElementById('password').value;
+  if(password.length<3)
+  {
+    alert("Password must be at least 3 characters long.");
+    return false;
+}
+}
+function checkpasswordmatch() {
+  var password = document.getElementById('password').value;
+  var repeatPw = document.getElementById('repeatPw').value;
+  if(password!=repeatPw) {
+    alert("password do not match");
+  } else {
+    alert("password match");
+  }
+
+}
+function ValidateEmail() {
+if (/^\w+([\.-]?\ w+)*@\w+([\.-]?\ w+)*(\.\w{2,3})+$/.test(myForm.email.value))
+{
+return (true)
+}
+alert("You have entered an invalid email address!")
+return (false)
+}
+
+
+</script>
+  <style>
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.carousel-inner > .item > img {
+  width:1000px;
+  height:360px;
+}
+#saveData {
+margin-left:20px;
+}
+.navbar {
+      margin-bottom: 0;
+      background-color: #20B2AA;
+      z-index: 9999;
+      border: 0;
+
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius:
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #20B2AA !important;
+      background-color: #fff !important;
+  }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+#email{
+  padding: 12px;
+  width:100%;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+#id01 {
+  background-color: #20B2AA;
+}
+h2{
+  margin-left: 540px;
+}
+
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+.signupbtn{
+margin-left: 20px;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+
+
+  </head>
+  <bodyid="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-scroll-top">
+    <div class="container">
+     <div class="navbar-header">
+        <!---<nav class="navbar navbar-inverse">--->
+        <a class="navbar-brand" href="#">Movies</a>
+        </div>
+        <ul id="scroller" class="nav navbar-nav">
+          <li><a href="carousel.html">Home</a></li>
+          <li><a href="new-releases.html">New Releases</a></li>
+          <li class="active"><a href="signup.html">Signup</a></li>
+          <li><a href="login.html">Login</a></li>
+          </ul>
+      </div>
+
+
+  <h2><b><i>Movies Signup Form</i></b></h2>
+
+
+
+
+    <form id="id01" name="myForm">
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" id="username" onfocusout="checkusername()" placeholder="Enter name" name="Username"   >
+
+        <label><b>Email</b></label>
+        <input type="email" id="email" onfocusout="ValidateEmail()" placeholder="Enter Email" name="email" required>
+
+        <label><b>password</b></label>
+        <input type="password" id="password" onfocusout="checkpassword()" placeholder="Enter Password" name="psw" required>
+
+        <label><b>Confirm Password</b></label>
+        <input type="password" id="repeatPw" onfocusout="checkpasswordmatch()" placeholder="Confirm Password"   name="psw-repeat" required >
+        <input type="checkbox" checked="checked"> Remember me
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="width:20%">Cancel</button>
+          <button   type="button" onclick="submitFunc()"class="signupbtn" style="width:20%" >Sign Up</button>
+
+
+        <!--  <button id="saveData"  type="button" style="width:20%">Save</button>-->
+
+
+        </div>
+      </div>
+      <div>
+
+         <p>
+      .
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+      </div>
+    </form>
+  </div>
+
+    <script type="text/javascript">
+    function submitFunc(){
+      console.log("form clicked");
+      // e.preventDefault();
+      var name = $('#username').val();
+      var password = $('#password').val();
+      var welcome = "welcome:" + name + "";
+      if(name != "" && password != "") {
+          // store(name,password);
+         // set usermame to localStorsge.
+         console.log(name,password);
+         localStorage.setItem('name', name);
+         localStorage.setItem('password',password);
+        window.location = "carousel.html";
+           console.log(localStorage.name,localStorage.password);
+         //alert("you have been successfully registered");
+         console.log(welcome);
+
+      }
+    }
+
+        $(window).ready(function(){
+
+
+           var name = document.getElementById('username');
+           var email = document.getElementById('email');
+           var password = document.getElementById('password');
+           var repeatpw = document.getElementById('repeatPw');
+
+      
+  });
+
+
+
+  </script>
+
+
+  </body>
+
+    </html>

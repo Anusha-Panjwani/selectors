@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>movies carousel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <style>
+
+
+.carousel-inner > .item > img {
+  width:1000px;
+  height:360px;
+}
+.navbar {
+      margin-bottom: 0;
+      background-color: #20B2AA;
+      z-index: 9999;
+      border: 0;
+
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius:
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #20B2AA !important;
+      background-color: #fff !important;
+  }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  #myInput {
+
+   background-position: 10px 100px;
+   background-repeat: no-repeat;
+   width: 70%;
+   font-size: 16px;
+   padding: 12px 20px 12px 40px;
+   border: 1px solid #ddd;
+   margin-bottom: 12px;
+   margin-left: 180px;
+  margin-right: 170px;
+  }
+  #price {
+
+  }
+  #seats {
+    margin-left: 33px;
+    margin-bottom: 10px;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #20B2AA;
+}
+  </style>
+</head>
+<bodyid="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-scroll-top">
+  <div class="container">
+   <div class="navbar-header">
+      <!---<nav class="navbar navbar-inverse">--->
+      <a class="navbar-brand" href="#">Movies</a>
+      </div>
+
+  <ul class="nav navbar-nav">
+    <li><a href="carousel.html">Home</a></li>
+    <li class="active"><a href="new-releases.html">New Releases</a></li>
+    <li><a href="signup.html">Signup</a></li>
+    <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+    <div class="container">
+  <div id="myCarousel" class="carousel slide" dataride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="5"></li>
+    <li data-target="#myCarousel" data-slide-to="6"></li>
+    <li data-target="#myCarousel" data-slide-to="7"></li>
+    <li data-target="#myCarousel" data-slide-to="8"></li>
+    <li data-target="#myCarousel" data-slide-to="9"></li>
+  </ol>
+
+  <div class="carousel-inner" >
+
+    <div class="item active">
+      <img src="images/ferdinand_hd_2017-wp1.1.jpg" alt="Ferdinand" style=width:100%  />
+      <h1>Ferdinand</h1><!---0-->
+      </div>
+      <div class="item">
+      <img src="images/transformers_the_last_knight.jpg" alt="Transformers the Last Night" style=width:100% />
+      <h1>Transformers the Last Night</h1><!---1-->
+      </div>
+      <div class="item">
+      <img src="images/wp3.jpg" alt="phillauri" style=width:100% />
+      <h1>phillauri</h1><!--2-->
+      </div>
+      <div class="item">
+      <img src="images/ancestors_game_2wp4.jpg" alt="Ancestors Game" style=width:100%  />
+      <h1>Ancestors Game</h1><!---3-->
+      </div>
+      <div class="item">
+      <img src="images/beauty_and_the_beast_wp5.jpg" alt="Beauty and the Beast" style=width:100%  />
+      <h1>Beauty and the Beast</h1><!---4-->
+      </div>
+      <div class="item">
+      <img src="images/iron_man_in_the_rainwp6.jpg" alt="Iron Man In The Rain" style=width:100% />
+      <h1>Iron Man In The Rain</h1><!---5-->
+      </div>
+      <div class="item">
+      <img src="images/bafrinath_ki_dulhania_first_lookwp7.jpg" alt="Badrinath Ki Dulhaniya" style=width:100% />
+      <h1>Badrinath Ki Dulhaniya</h1><!---6-->
+      </div>
+      <div class="item">
+      <img src="images/mila_kunis_oz_the_great_and_powerwp8.jpg" alt="Mila Kunis OZ The Great and Poweful" style=width:100% />
+      <h1>Mila Kunis OZ The Great and Powerful</h1><!---7-->
+      </div>
+      <div class="item">
+      <img src="images/spiderman_homecoming_2017_4k_8k-wp9.jpg" alt="Spiderman Home Coming 2017" style=width:100% />
+      <h1>Spiderman Home Coming 2017</h1><!---8-->
+      </div>
+      <div class="item">
+      <img src="images/the_complete_twilight_saga-wp10.jpg" alt="The Complete Twilight Saga" style=width:100% />
+      <h1>The Complete Twilight Saga</h1><!---9-->
+      </div>
+      </div><!---carousel-->
+
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  <span class="sr-only">previous</span>
+      </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  <span class="sr-only">next</span>
+  </a>
+  </div>
+</div><br /><br />
+<input type="text" id="myInput" keyup="myFunction()" placeholder="search for movies..." data-icon="search"/><br />
+<div class="container">
+  <h2>List Of Movies</h2>
+  <table class="table  table-striped table-hover table-bordered table-condensed"
+  action="http://www.google.com">
+    <thead>
+    <tr>
+      <th>S.No.</th>
+      <th>Movie Name</th>
+      <th>Directed By</th>
+      <th>Release Date</th>
+      <th>Book</th>
+      <tr>
+        <td>
+      1.
+  </td>
+  <td>
+    Bahubali-2
+  </td>
+  <td>
+    S.S Rajamauli
+
+  </td>
+  <td>
+  28/03/2017
+  </td>
+  <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Book movie </h4>
+       </div>
+       <div class="modal-body">
+         <form>
+           <label>Movie Name</label>
+           <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+        </form>
+        <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+            No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+            Ticket per seat: <input type="number" ng-model="price" id="price" />
+            <p>Total amount: {{seats * price}}</p>
+        </div>
+
+       </div>
+       <div class="modal-footer">
+         <p>Payment Method:</p>
+         <label>Paytm</label>
+         <input type="radio" placeholder="Paytm" />
+         <label>Net Banking</label>
+         <input type="radio" placeholder="Net Banking" />
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+         <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+    </div>
+       </div>
+     </div>
+
+   </div>
+ </div>
+
+</div>
+  </td>
+      </tr>
+      <tr>
+  <td>
+    2.
+  </td>
+  <td>
+    Raees
+  </td>
+  <td>
+  Rahul Dholakia
+  </td>
+  <td>
+    25/01/2017
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</td>
+      </tr>
+      <tr>
+  <td>
+    3.
+  </td>
+  <td>
+    phillauri
+  </td>
+  <td>
+  Suraj Sharma
+  </td>
+  <td>
+    3/02/2017
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</td>
+      </tr>
+      <tr>
+  <td>
+    4.
+  </td>
+  <td>
+    Ancestors game
+  </td>
+  <td>
+  Odyssey
+  </td>
+  <td>
+    7/05/2017
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div></td>
+      </tr>
+      <tr>
+  <td>
+    5.
+  </td>
+  <td>
+    Beauty ant the Beast
+  </td>
+  <td>
+   Stephen Chbosky
+  </td>
+  <td>
+    2/02/2017
+  </td>
+  <td>
+
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</td>
+      </tr>
+      <tr>
+  <td>
+    6.
+  </td>
+  <td>
+    Iron Man in the Rain
+  </td>
+  <td>
+  Jon Favreau
+  </td>
+  <td>
+    10/01/2013
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+    </div>
+     </div>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+</td>
+      </tr>
+      <tr>
+  <td>
+    7.
+  </td>
+  <td>
+    Badrinath ki Dulhaniya
+  </td>
+  <td>
+  Shashank Khaitan
+  </td>
+  <td>
+    10/03/2016
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</td>
+      </tr>
+      <tr>
+  <td>
+    8.
+  </td>
+  <td>
+    Mila konis Oz the great and powerful
+  </td>
+  <td>
+   L. Frank Baum
+  </td>
+  <td>
+    15/04/2017
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</td>
+      </tr>
+      <tr>
+  <td>
+    9.
+  </td>
+  <td>
+    Spider man home coming 2017
+  </td>
+  <td>
+   Sam Raimi
+  </td>
+  <td>
+    3/01/2017
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+    </div>
+     </div>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+    </td>
+      </tr>
+      <tr>
+  <td>
+    10.
+  </td>
+  <td>
+  The Complete Twilight Saga
+  </td>
+  <td>
+  Catherine Hardwicke
+  </td>
+  <td>
+    6/01/2015
+  </td>
+  <td>
+    <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+    <div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
+
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+     </div>
+     <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+     </div>
+     <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</td>
+      </tr>
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      10.
+      </td>
+      <td>
+      The Complete Twilight Saga
+      </td>
+      <td>
+      Catherine Hardwicke
+      </td>
+      <td>
+      6/01/2015
+      </td>
+      <td>
+      <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Book</button>
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Book movie </h4>
+      </div>
+      <div class="modal-body">
+       <form>
+         <label>Movie Name</label>
+         <input type="text" placeholder="enter movie name" /><br /><br />
+
+
+
+      </form>
+      <div data-ng-App="" data-ng-init="seats=1; price=150">
+
+          No.of seats: <input type="number" ng-model="seats" id="seats" /><br />
+          Ticket per seat: <input type="number" ng-model="price" id="price" />
+          <p>Total amount: {{seats * price}}</p>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+       <p>Payment Method:</p>
+       <label>Paytm</label>
+       <input type="radio" placeholder="Paytm" />
+       <label>Net Banking</label>
+       <input type="radio" placeholder="Net Banking" />
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="text", class="btn btn-default btn-info btn-lg center-block" data-toggle="modal" data-target="#myModal">Confirm</button>
+       <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+      </div>
+
+      </div>
+      </td>
+      </tr>
+
+      
+
+  </tbody>
+  </table>
+</div>
+<script>
+$(document).ready(function () {
+
+$('#myInput').keyup( function() {
+  var value = $(this).val();
+  var patt = new RegExp(value, "i");
+
+  $('.table').find('tr').each(function() {
+    if (!($(this).find('td').text().search(patt) >= 0)) {
+      $(this).not('.myHead').hide();
+    }
+    if (($(this).find('td').text().search(patt) >= 0)) {
+      $(this).show();
+    }
+  });
+
+});
+
+  $("input").keyup(multInputs);
+  function multInputs() {
+      var mult = 0;
+      $("tr.txtMult").not('.odd').each(function () {
+          var $val1 = $('.val1', this).val();
+
+          var $val3 = $('.val3', $(this).next()).val();
+
+          var $total = $val1 * $val2;
+
+
+          $('.multTotal', this).text($total);
+        });
+
+      $("#grandTotal").text(mult);
+  }
+});
+
+</script>
+</body>
+<footer>
+<div id="contact" style=background-color:white class="container">
+  <h2 class="text-center"><b>Contact</b></h2>
+  <p class="text-center"><em>We love our fans!</em></p>
+
+  <div class="row">
+    <div class="col-md-4" >
+      <p>Fan? Drop a note.</p>
+    <span class="glyphicon glyphicon-map-marker" ></span><span>Mumbai</span>
+      <span class="glyphicon glyphicon-phone" ></span><span>Phone: +91 9876976842</span>
+      <span class="glyphicon glyphicon-envelope"></span><span>Email: anushapanjwani1@gmail.com</span>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <div class="col-sm-6 form-group">
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="2"></textarea>
+
+      </div>
+
+
+        <div class="col-sm-6 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+    </div>
+  </div>
+  <br>
+</footer>
+
+</html>

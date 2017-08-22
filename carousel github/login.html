@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>movies carousel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+      }
+
+      /* Set a style for all buttons */
+      button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+      }
+
+      button:hover {
+          opacity: 0.8;
+      }
+
+      /* Extra styles for the cancel button */
+      .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+          background-color: #f44336;
+      }
+
+      /* Center the image and position the close button */
+      .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+          position: relative;
+      }
+
+      img.avatar {
+          width: 40%;
+          border-radius: 50%;
+      }
+
+      .container {
+          padding: 16px;
+      }
+
+      span.psw {
+          float: right;
+          padding-top: 16px;
+      }
+
+      /* The Modal (background) */
+      .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          padding-top: 60px;
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      /* The Close Button (x) */
+      .close {
+          position: absolute;
+          right: 25px;
+          top: 0;
+          color: #000;
+          font-size: 35px;
+          font-weight: bold;
+      }
+      .carousel-inner > .item > img {
+        width:1000px;
+        height:360px;
+      }
+      .navbar {
+            margin-bottom: 0;
+            background-color: #20B2AA;
+            z-index: 9999;
+            border: 0;
+
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius:
+            font-family: Montserrat, sans-serif;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #20B2AA !important;
+            background-color: #fff !important;
+        }
+          .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+      .psw{
+        margin-right: 1050px;
+
+      }
+      #form {
+        background-color: #20B2AA;
+      }
+      p{
+        color: #20B2AA;
+      }
+      .close:hover,
+      .close:focus {
+          color: red;
+          cursor: pointer;
+      }
+
+      /* Add Zoom Animation */
+      .animate {
+          -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s
+      }
+      h2{
+        margin-left: 550px;
+
+      }
+
+      @-webkit-keyframes animatezoom {
+          from {-webkit-transform: scale(0)}
+          to {-webkit-transform: scale(1)}
+      }
+
+      @keyframes animatezoom {
+          from {transform: scale(0)}
+          to {transform: scale(1)}
+      }
+
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 30px) {
+          span.psw {
+             display: block;
+             float: none;
+             margin-right: 500px;
+          }
+
+}
+</style>
+
+  </head>
+  <bodyid="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-scroll-top">
+    <div class="container">
+     <div class="navbar-header">
+        <!---<nav class="navbar navbar-inverse">--->
+        <a class="navbar-brand" href="#">Movies</a>
+        </div>
+        <ul id="scroller" class="nav navbar-nav">
+          <li ><a href="carousel.html">Home</a></li>
+          <li><a href="new-releases.html">New Releases</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <li class="active"><a href="login.html">Login</a></li>
+          </ul>
+      </div>
+      <h2><b><i>Movies Login Form</i></b></h2>
+
+
+
+    <form id="form" action="carousel.html">
+       <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password"  id="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit"  style="width:10%">Login</button>
+
+      <input type="checkbox" checked="checked"> Remember me
+      <span class="psw">Forgot <a href="http:/www.google.com">password?</a></span>
+
+    </div>
+
+
+
+
+<div>
+
+   <p>
+.
+  </p>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+  </form>
+
+
+
+<script type="text/javascript">
+
+$(window).ready(function() {
+
+      var modal = document.getElementById('form');
+
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+            //  window.location="carousel.html"
+
+          }
+      }
+
+      var name = document.getElementById('username');
+//      var email = document.getElementById('email');
+      var password = document.getElementById('password');
+  //    var repeatpw = document.getElementById('repeatPw');
+  //window.location="carousel.html"
+
+      console.log('Name:',name.value);
+    //  console.log('Email:',email.value);
+      console.log('Password:',password.value);
+    //  window.location="carousel.html"
+
+      //console.log('Confirm_password:',repeatpw.value);t
+
+      /*$("form").on('submit', function(e) {
+             console.log("form clicked");
+             e.preventDefault();
+             var name = $('#username').val();
+             var password = $('#password').val();
+            // var welcome = "welcome:" + name + "";
+             if(name != "" && password != "") {
+
+                // set usermame to localStorsge.
+
+                console.log("name", name);
+                console.log("password",password)
+              //  alert("you have been successfully logged in---!");
+              //  console.log(welcome);
+
+             }
+             //store(name,password);
+      });*/
+
+        $('form').on('submit', function(){
+
+           var name = document.getElementById('username').value;
+           var password = document.getElementById('password').value;
+           var alreadyStoredUsername = localStorage.name;
+           var alreadyStoredPassword = localStorage.password;
+           console.log(name,password,alreadyStoredUsername,alreadyStoredPassword);
+           if( alreadyStoredUsername == name && alreadyStoredPassword == password) {
+            //window.location="carousel.html";
+             alert("login successfully");
+             }else {
+              alert("name and password do not match");
+             //window.location="carousel.html"
+             }
+      });
+
+    });
+
+      /*function store (name,password) {
+
+       localStorage.setItem('name', name);
+       localStorage.setItem('password',password);
+       console.log(name);
+       console.log(password);
+       window.location = 'file:///C:/Users/hp/Desktop/MyProject/carousel.html';
+
+}*/
+//window.location="carousel.html"
+
+
+</script>
+
+</body>
+</html>
